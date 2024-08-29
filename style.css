@@ -9,6 +9,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url(recources/images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% ;
 }
 
 h1 {
@@ -35,7 +39,7 @@ h1 {
   display: inline-flex;
   flex-direction: row;
   position: relative;
-  left: 680px;
+  left: 668px;
   top: 70px;
 }
 
@@ -51,7 +55,7 @@ h1 {
 .triangle {
   position: absolute;
   bottom: -10px;
-  left: 96%;
+  left: 193px;
   transform: translateX(-50%);
   width: 0;
   height: 0;
@@ -90,10 +94,18 @@ h1 {
 
 }
 
+
+.circle {
+  height: 10px;
+  width: 100%;
+  color: white;
+  z-index: 1;
+}
+
 .bar {
   height: 16px;
   width: 100%;
-  background-color: white;
+  background-color: hsl(229, 57%, 11%);
   border-radius: 10px;
 }
 
@@ -124,12 +136,60 @@ h1 {
   width: 350px;
   background-color: #1d2c67;
   border-radius: 12px 96px 12px 12px;
+  display: flex;
+  justify-items: start;
+  flex-direction: column;
+  align-items: flex-start;
+
+ 
+
 }
+
+
 
 .logo {
   height: 135px;
   width: 100%;
+  padding: 40px 0px 0 40px;
+
 }
+
+.icon-cont {
+  display: inline-flex;
+  gap: 20px;
+  align-items: end;
+  padding: 30px;
+  width: 100%;
+
+
+ 
+
+}
+
+.item-cont {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color:  hsl(229, 57%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+  
+.item {
+
+  height: 24px;
+  width: 100%px;
+  align-items: center;
+  
+  }
+
+
+
+
+
+
 
 /*animation */
 @keyframes slideUp500 {
@@ -146,9 +206,10 @@ h1 {
 @media (max-width: 1000px) {
   .storage-container {
     flex-direction: column;
-    animation: slideUp500 1s forwards;
+    animation: slideUp500 0.5s forwards;
     height: 464px;
-  }
+    -webkit-animation: slideUp500 0.5s forwards;
+}
 
   .fylo,
   .storage-box,
@@ -195,5 +256,11 @@ h1 {
   .datacont {
     width: 100%;
     padding: 40px;
+  }
+
+  body {
+   
+  background-image: url(recources/images/bg-mobile.png);
+  background-repeat: no-repeat;
   }
 }
